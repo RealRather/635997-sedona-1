@@ -1,34 +1,34 @@
 @font-face {
-    font-family: "PT Sans";
-    src:
-        local("PT Sans"),
-        url("../fonts/ptsans.woff") format("woff"),
-        url("../fonts/ptsans.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "PT Sans";
+  src:
+      local("PT Sans"),
+      url("../fonts/ptsans.woff") format("woff"),
+      url("../fonts/ptsans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "PT Sans";
-    src:
-        local("PT Sans Bold"),
-        url("../fonts/ptsansbold.woff") format("woff"),
-        url("../fonts/ptsansbold.woff2") format("woff2");
-    font-weight: bold;
-    font-style: normal;
+  font-family: "PT Sans";
+  src:
+      local("PT Sans Bold"),
+      url("../fonts/ptsansbold.woff") format("woff"),
+      url("../fonts/ptsansbold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: normal;
-    background-color: #ffffff;
-    color: #333333;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  background-color: #ffffff;
+  color: #333333;
 }
 
 .container {
@@ -42,8 +42,6 @@ body {
     width: 1200px;
     margin: 0 auto;
     padding: 0;
-    /*margin-right: auto;
-    margin-left: auto;*/
     box-shadow:
         0px 0px 30px 10px rgba(200, 200, 200, 0.2),
        -40px 0px 0px 10px rgba(242, 242, 242, 1),
@@ -105,7 +103,6 @@ body {
   width: 1200px;
   margin: 0;
   padding: 0;
-  /* Временно для сетки */
   min-height: 56px;
 }
 
@@ -122,7 +119,6 @@ body {
     padding: 0;
     display: flex;
     justify-content: space-between;
-    /* Временно для сетки */
     min-height: 56px;
 }
 
@@ -498,6 +494,7 @@ body {
 .modal-search {
     position: absolute;
     top: 206px;
+    left: 315px;
     min-height: 395px;
     width: 568px;
 }
@@ -562,6 +559,7 @@ button {
     background-color: #81b3d2;
     padding: 21px 0;
     width: 100%;
+    cursor: pointer;
     text-align: center;
     align-self: flex-end;
 }
@@ -703,6 +701,7 @@ button {
 
 .location-item label {
     width: 100px;
+    padding: 8px 0 0;
 }
 
 .location-list button {
@@ -787,6 +786,7 @@ button {
   margin: 0;
 }
 
+
 .modal-map {
     color: #000000;
     background-color: #ffffff;
@@ -827,6 +827,8 @@ button {
 }
 
 .footer-copyright span {
+    display: block;
+    margin-right: 10px;
     cursor: pointer;
     color: #000000;
     align-items: center;
@@ -885,16 +887,6 @@ a.copyright:active path {
   background-color: #5496bd;
 }
 
-
-/*catalog.html*/
-/*
-.inner-container {
-    width: 1056px;
-    margin: 0 auto;
-    padding: 0 72px;
-}
-*/
-
 .filters {
     display: flex;
     text-align: center;
@@ -941,7 +933,6 @@ a.copyright:active path {
 .filter-form fieldset:nth-child(2) {
     width: 274px;
     margin-right: auto;
-    /*background-color: #aaa;*/
 }
 
 .filter-form fieldset:nth-child(3) {
@@ -970,18 +961,6 @@ a.copyright:active path {
     width: 138px;
     height: 37px;
 }
-
-/*
-.location-form button[type="submit"]:hover,
-.location-form button[type="submit"]:focus {
-    background-color: #669ec0;
-}
-
-.location-form button[type="submit"]:active {
-    color: #94b9d2;
-    background-color: #5496bd;
-}
-*/
 
 .sotring {
     padding: 29px 72px;
@@ -1111,17 +1090,17 @@ a.copyright:active path {
 }
 
 .description h3 {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 14px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 14px;
 }
 
 .description .hostel {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .description .booking {
-    margin-top: 5px;
+  margin-top: 5px;
  }
 
 .description span,
@@ -1131,38 +1110,51 @@ a.copyright:active path {
 }
 
 .evaluation {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0;
-    margin: 5px 0;
-    min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 5px 0;
+  min-height: 90px;
 }
 
-.booking a  {
-    text-decoration: none;
-    text-align: center;
-    vertical-align: middle;
-    font-weight: bold;
-    color: #ffffff;
-    margin: 0;
-    padding : 5px 17px 4px;
-    margin-right: 6px;
+.evaluation .count-stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.count-stars .stars {
+  margin-left: 6px;
+  background: url("../img/star.svg") no-repeat 0 0;
+  width: 18px;
+  height: 18px;
+}
+
+.booking a {
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  padding : 5px 17px 4px;
+  margin-right: 6px;
 }
 
 .booking .detail {
-    background-color: #81b3d2;
+  background-color: #81b3d2;
 }
 
 .booking .book {
-    background-color: #766357;
+  background-color: #766357;
 }
 
 .evaluation .rating {
-    color: #666666;
-    background-color: #f2f2f2;
-    padding-left: 16px;
-    padding-right: 14px;
+  color: #666666;
+  background-color: #f2f2f2;
+  padding-left: 16px;
+  padding-right: 14px;
 }
 
 .visually-hidden {
@@ -1287,7 +1279,7 @@ a.copyright:active path {
   left: 80%;
 }
 
-.btn-transparent {
+.filter-button {
   display: block;
   margin: 0 auto;
   padding: 6px 35px;
