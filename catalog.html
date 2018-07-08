@@ -71,23 +71,20 @@
                     </fieldset>
                     <fieldset>
                         <legend>Стоимость в сутки (P):</legend>
-                        <div class="half-width output-area">
-                            <p class="min-cost">
-                                <span>От</span>
-                                <output name="lCost" for="LeftCost">0</output>
-                            </p>
-                            <p class="max-cost">
-                              <span>До</span>
-                              <output name="rCost" for="RightCost">3000</output>
-                            </p>
+                        <div class="filter-range">
+                            <div class="price-controls">
+                                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+                            </div>
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="range-toggle range-toggle-min"></div>
+                                <div class="range-toggle range-toggle-max"></div>
+                            </div>
+                            <button class="filter-button button" type="submit">Показать</button>
                         </div>
-                        <div class="filter-cost">
-                            <label for="left-cost" ></label>
-                            <input class="left-filter-cost"  type="range" id="left-cost" name="LeftCost"  min="0" max="3000" step="100" value="0">
-                            <label for="left-cost" ></label>
-                            <input class="right-filter-cost" type="range" id="right-cost" name="RightCost"  min="100" max="5000" step="100" value="3000">
-                        </div>
-                        <button type="submit" class="filter-button button">Показать</button>
                     </fieldset>
                 </form>
             </section>
