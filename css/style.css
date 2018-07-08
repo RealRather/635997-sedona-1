@@ -461,6 +461,7 @@ body {
 }
 
 .interest {
+    position: relative;
     text-align: center;
     background-color: #ffffff;
     display: flex;
@@ -485,7 +486,6 @@ body {
 }
 
 .interest p {
-    /*position: relative;*/
     font-size: 14px;
     line-height: 24px;
     color: #333333;
@@ -494,9 +494,10 @@ body {
 }
 
 /*форма*/
+
 .modal-search {
-    position: relative;
-    z-index: 4;
+    position: absolute;
+    top: 206px;
     min-height: 395px;
     width: 568px;
 }
@@ -536,17 +537,21 @@ button {
 
 .location-form {
     position: absolute;
-  /*  top: 86px;*/
+    padding: 55px 60px;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     flex-wrap: wrap;
     box-sizing: border-box;
-    background-color: #cccccc;
+    background-color: #ffffff;
     width: 568px;
     flex-basis: 468px;
-    /*height: 395px;*/
+}
+
+.location-form-close,
+.location-form-withjs {
+  display: none;
 }
 
 .location-form button[type="submit"] {
@@ -555,12 +560,10 @@ button {
     line-height: 26px;
     color: #ffffff;
     background-color: #81b3d2;
-    padding: 21px 0px;
+    padding: 21px 0;
     width: 100%;
     text-align: center;
     align-self: flex-end;
-    /*position: relative;
-    bottom: 0;*/
 }
 
 .location-form button[type="submit"]:hover,
@@ -577,34 +580,81 @@ button {
 }
 
 .location-list {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 35px;
+    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 40px;
-    width: 458px;
-    box-sizing: border-box;
-}
-
-.location-item,
-.location-list  {
+    flex-wrap: nowrap;
+    text-align: left;
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
-    /*padding-left: 320px;*/
-    text-align: center;
-    align-items: center;
-    /*box-sizing: border-box;*/
-    width: 458px;
-    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.location-list .location-item {
+    display: flex;
+    position: relative;
     margin: 0;
 }
 
-.location-item input,
-.location-list input  {
+.interest .location-item {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 35px;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: left;
+    box-sizing: border-box;
+    width: 458px;
+}
+
+.location-item input {
+    padding: 12px 8px;
     font: inherit;
     text-transform: uppercase;
     background-color: #f2f2f2;
     border:none;
+    width: 350px;
+}
+
+.location-list .location-item-adults {
+    width: 228px;
+}
+
+.location-list .location-item-children {
+    width: 180px;
+}
+
+.location-list input {
+  padding: 12px 8px;
+  font: inherit;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border: none;
+  text-align: center;
+  width: 116px;
+  display: block;
+  height: 38px;
+}
+
+.location-item input[type="number"]::-webkit-textfield-decoration-container,
+.location-item input[type="number"]::-webkit-outer-spin-button,
+.location-item input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.location-item input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .location-item input:hover,
@@ -623,7 +673,17 @@ button {
 }
 
 .location-item .calendar {
+    margin: 0;
+    padding: 0;
     background-color:inherit;
+    position: absolute;
+    right: 8px;
+    top: 12px;
+}
+
+.location-item .calendar:nth-child(1) {
+    right: 0;
+    top: 0;
 }
 
 .calendar .svg-icon {
@@ -641,13 +701,25 @@ button {
     fill: #81b3d2;
 }
 
-.location-list {
-    list-style: none;
+.location-item label {
+    width: 100px;
 }
 
 .location-list button {
     color: #a9a9a9;
     background-color: #f2f2f2;
+    border: none;
+}
+
+.location-list .button-count {
+  padding: 0;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
 }
 
 .location-list button:hover,
@@ -659,6 +731,62 @@ button {
     color: #81b3d2;
 }
 
+.location-list li.location-item-adults,
+.location-list li.location-item-children {
+  margin: 0;
+}
+
+.location-item-children .plus {
+  right: 0;
+  left: auto;
+}
+
+.location-item-children .minus {
+  right: auto;
+  left: 61px;
+}
+
+.location-item-adults .plus {
+  right: 12px;
+  left: auto;
+}
+
+.location-item-adults .minus {
+  right: auto;
+  left: 100px;
+}
+
+.minus span,
+.plus span {
+   margin-top: -1px;
+   margin-left: -6px;
+   position: absolute;
+   background-color: #a9a9a9;
+   top: 50%;
+   left: 50%;
+   width: 12px;
+   height: 3px;
+}
+
+.plus span::before {
+  content: "";
+  transform: rotate(90deg);
+  margin-top: -1px;
+  margin-left: -6px;
+  position: absolute;
+  background-color: #a9a9a9;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 3px;
+}
+
+.location-item-adults input,
+.location-item-children input {
+  padding: 0;
+  margin: 0;
+}
+
 .modal-map {
     color: #000000;
     background-color: #ffffff;
@@ -668,24 +796,13 @@ button {
     margin: 0;
     width: 1200px;
     height: 595px;
-  /*  position: relative;
-    z-index: 200;*/
-  /*  bottom: 309px;*/
 }
 
 .map-image {
     display: block;
     background-position: top center;
     background-repeat: no-repeat;
-    /*position: relative;*/
 }
-
-/*
-.main-index {
-    position: absolute;
-    z-index: 23;
-    top: 0;
-}*/
 
 .main-footer {
     display: flex;
@@ -805,8 +922,6 @@ a.copyright:active path {
     border: none;
     padding: 0;
     margin: 0;
-    /*временно цвет*/
-  /*  background-color: #ccc;*/
     min-height: 160px;
 }
 
@@ -966,7 +1081,6 @@ a.copyright:active path {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /*padding: 0 72px;*/
 }
 
 .catalog-item {
@@ -976,7 +1090,6 @@ a.copyright:active path {
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: nowrap;
-    /*width: 1056px;*/
     padding: 25px 72px;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -989,15 +1102,12 @@ a.copyright:active path {
     margin-right: 30px;
 }
 
-
 .description {
     padding: 0;
     margin: 0;
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    /*justify-content: space-between;*/
-    /*min-height: 95px;*/
 }
 
 .description h3 {
@@ -1085,12 +1195,9 @@ a.copyright:active path {
 
 .price-controls {
   position: relative;
-
   height: 36px;
   margin-bottom: 20px;
-
   font-size: 0;
-
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
