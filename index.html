@@ -115,7 +115,7 @@
                         и мы покажем вам лучшие предложения гостиниц в Седоне
                     </p>
                     <div class="modal modal-search">
-                        <a class="search-form" href="form.html">Поиск гостиницы в Седоне</a>
+                        <a class="search-form search-form-open" href="form.html">Поиск гостиницы в Седоне</a>
                         <form class="location-form" action="https://echo.htmlacademy.ru" method="get">
                             <p class="location-item">
                                 <label for="arrival-date" >Дата заезда:</label>
@@ -150,24 +150,24 @@
                                 </button>
                             </p>
                             <ul class="location-list">
-                                <li>
+                                <li class="location-item location-item-adults">
                                     <label class="adults" for="adults">Взрослые:</label>
-                                    <button class="minus" type="button">
-                                        <span aria-label="img-minus">-</span>
+                                    <button class="button-count minus" type="button">
+                                        <span aria-label="img-minus"></span>
                                     </button>
                                     <input type="number" id="adults" name="adults" value="2">
-                                    <button class="plus" type="button">
-                                        <span aria-label="img-plus">+</span>
+                                    <button class="button-count plus" type="button">
+                                        <span aria-label="img-plus"></span>
                                     </button>
                                 </li>
-                                <li>
+                                <li class="location-item location-item-children">
                                     <label class="children" for="children">Дети:</label>
-                                    <button class="minus" type="button">
-                                        <span aria-label="img-minus">-</span>
+                                    <button class="button-count minus" type="button">
+                                        <span aria-label="img-minus"></span>
                                     </button>
                                     <input type="number" id="children" name="children" value="0">
-                                    <button class="plus" type="button">
-                                        <span aria-label="img-plus">+</span>
+                                    <button class="button-count plus" type="button">
+                                        <span aria-label="img-plus"></span>
                                     </button>
                                 </li>
                             </ul>
@@ -175,15 +175,15 @@
                         </form>
                         <span class="modal-close"></span>
                     </div>
-                    <div class="modal modal-map">
-                        <h2 class="visually-hidden">Как добраться до гостиницы</h2>
-                        <div class="map-image">
-                            <img class="map-img visually-hidden" src="img/mapb.png" alt="Карта">
-                            <iframe class="map-iframe visually-hidden"></iframe>
-                        </div>
-                        <button class="modal-close visually-hidden" type="button">Закрыть</button>
-                    </div>
                 </section>
+                <div class="modal modal-map">
+                    <h2 class="visually-hidden">Как добраться до гостиницы</h2>
+                    <div class="map-image">
+                        <img class="map-img visually-hidden" src="img/mapb.png" alt="Карта">
+                        <iframe class="map-iframe visually-hidden"></iframe>
+                    </div>
+                    <button class="modal-close visually-hidden" type="button">Закрыть</button>
+                </div>
             </main>
 
             <footer class="main-footer main-index">
@@ -230,5 +230,6 @@
                 </div>
             </footer>
         </div>
+        <script src="js/modal-form.js"></script>
     </body>
 </html>
