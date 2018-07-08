@@ -897,7 +897,7 @@ a.copyright:active path {
     background-repeat: no-repeat;
     background-size: 1200px 217px;
     margin: 0;
-    padding:27px 72px 30px;
+    padding: 22px 72px 18px;
 }
 
 .filters .filter-form {
@@ -918,7 +918,7 @@ a.copyright:active path {
 }
 
 .filters legend {
-    margin-bottom: 9px;
+    padding-bottom: 20px;
     font-size: 16px;
     line-height: 21px;
     text-align: left;
@@ -940,13 +940,52 @@ a.copyright:active path {
 }
 
 .filter-form ul {
+    padding-top: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+.filter-input[type="checkbox"] {
+  display: none;
+}
+
 .filter-input[type="checkbox"] + label {
     cursor: pointer;
+}
+
+.filter-option {
+  position: relative;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.filter-option label {
+  margin-left: 42px;
+}
+
+.filter-option label::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -2px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 26px;
+}
+
+.filter-option input[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    background-image: url("../img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 26px;
 }
 
 .filter-form button[type="submit"] {
