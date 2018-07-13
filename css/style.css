@@ -559,7 +559,7 @@ button {
   line-height: 26px;
   color: #ffffff;
   background-color: #81b3d2;
-  padding: 21px 0;
+  padding: 14px 0 19px;
   width: 100%;
   cursor: pointer;
   text-align: center;
@@ -582,7 +582,7 @@ button {
 .location-list {
   padding: 0;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 59px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -604,7 +604,7 @@ button {
 .interest .location-item {
   padding: 0;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   display: flex;
   flex-wrap: nowrap;
   position: relative;
@@ -617,12 +617,12 @@ button {
 }
 
 .location-item input {
-  padding: 12px 8px;
+  padding: 5px 8px;
   font: inherit;
   text-transform: uppercase;
   background-color: #f2f2f2;
   border:none;
-  width: 350px;
+  width: 325px;
 }
 
 .location-list .location-item-adults {
@@ -647,19 +647,11 @@ button {
 }
 
 .location-list input[name="adults"] {
-  left: 138px;
+  left: 150px;
 }
 
 .location-list input[name="children"] {
-  left: 102px;
-}
-
-.location-item input[type="number"]::-webkit-textfield-decoration-container,
-.location-item input[type="number"]::-webkit-outer-spin-button,
-.location-item input[type="number"]::-webkit-inner-spin-button {
-  border: none;
-  display:-webkit-box;
-  -webkit-appearance: none;
+  left: 105px;
 }
 
 .location-item input:hover,
@@ -680,13 +672,30 @@ button {
   border: 2px solid #e5e5e5;
 }
 
+.location-item input[type="number"]::-webkit-outer-spin-button,
+.location-item input[type="number"]::-webkit-inner-spin-button {
+  display: -webkit-box;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.location-item input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.location-item input[type="number"]:hover,
+.location-item input[type="number"]:focus {
+  -moz-appearance: number-input;
+  -moz-appearance: textfield;
+}
+
 .location-item .calendar {
   margin: 0;
   padding: 0;
   background-color:inherit;
   position: absolute;
   right: 8px;
-  top: 12px;
+  top: 7px;
 }
 
 .location-item .calendar:nth-child(1) {
@@ -710,7 +719,7 @@ button {
 }
 
 .location-item label {
-  padding: 8px 0 0;
+  padding: 5px 0 0;
 }
 
 .location-item .children {
@@ -759,17 +768,17 @@ button {
 
 .location-item-children .minus {
   right: auto;
-  left: 64px;
+  left: 68px;
 }
 
 .location-item-adults .plus {
-  right: 12px;
+  right: 0;
   left: auto;
 }
 
 .location-item-adults .minus {
   right: auto;
-  left: 100px;
+  left: 113px;
 }
 
 .minus span,
@@ -805,12 +814,13 @@ button {
 
 
 .modal-map {
+  margin: 0;
+  margin-top: 85px;
   color: #000000;
   background-color: #ffffff;
   background: #dfe7cd;
   background-image: url(../img/mapb.png);
   background-repeat: no-repeat;
-  margin: 0;
   width: 1200px;
   height: 595px;
 }
@@ -822,13 +832,15 @@ button {
 }
 
 .main-footer {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
   width: 1200px;
-  padding: 37px 0;
+  padding: 35px 0;
   background-color: rgba(255, 255, 255, 0.9);
+  bottom: 0;
 }
 
 .footer-tag a {
@@ -878,7 +890,7 @@ a.copyright:active path {
   width: 150px;
   margin: 0 auto;
   padding: 0;
-  padding-left: 20px;
+  padding-left: 14px;
 
   list-style: none;
 }
@@ -1099,7 +1111,8 @@ a.copyright:active path {
   width: 33px;
 }
 
-.sorting-order .order-up  {
+.sorting-order .order-up,
+.sorting-order .order-down {
   text-decoration: none;
 }
 
@@ -1121,14 +1134,14 @@ a.copyright:active path {
   margin: 0;
   font-size: 0;
   background:
-      url("../img/icon-up-dir.svg") no-repeat 0 0;
+      url("../img/icon-down-dir.svg") no-repeat 0 15px;
   width: 14px;
   height: 26px;
-  transform: rotate(180deg);
   cursor: pointer;
 }
 
 .catalog {
+  padding-bottom: 130px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
