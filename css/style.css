@@ -925,7 +925,7 @@ a.copyright:active path {
   background-repeat: no-repeat;
   background-size: 1200px 217px;
   margin: 0;
-  padding: 22px 72px 18px;
+  padding: 26px 72px 13px;
 }
 
 .filters .filter-form {
@@ -967,6 +967,10 @@ a.copyright:active path {
   width: 318px;
 }
 
+.filter-form fieldset:nth-child(3) > legend {
+  padding-bottom: 10px;
+}
+
 .filter-form ul {
   padding-top: 20px;
   list-style: none;
@@ -995,8 +999,8 @@ a.copyright:active path {
 .filter-option label::after {
   content: "";
   position: absolute;
-  top: -4px;
-  left: -2px;
+  top: 3px;
+  left: -4px;
   background-image:
       url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
@@ -1008,8 +1012,8 @@ a.copyright:active path {
 .filter-option input[type="checkbox"]:checked + label::after {
   content: "";
   position: absolute;
-  top: -4px;
-  left: 0;
+  top: 3px;
+  left: -2px;
   background-image:
       url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
@@ -1032,14 +1036,13 @@ a.copyright:active path {
 }
 
 .sotring {
-  padding: 29px 72px;
+  padding: 23px 71px;
   margin: 0;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   border-bottom: 1px solid #e5e5e5;
-
 }
 
 .sorting-search {
@@ -1154,16 +1157,17 @@ a.copyright:active path {
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: nowrap;
-  padding: 25px 72px;
+  padding: 23px 72px;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .catalog-item-image {
   padding: 0;
+  padding-top: 14px;
   margin: 0;
+  margin-right: 30px;
   width: 135px;
   height: 90px;
-  margin-right: 30px;
 }
 
 .description {
@@ -1172,26 +1176,28 @@ a.copyright:active path {
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  width: 304px;
 }
 
 .description h3 {
   padding: 0;
   margin: 0;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .description .hostel {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .description .booking {
   margin-top: 5px;
- }
+}
 
 .description span,
 .description p {
   padding: 0;
   margin: 0;
+  padding-right: 35px;
 }
 
 .evaluation {
@@ -1199,7 +1205,7 @@ a.copyright:active path {
   flex-direction: column;
   justify-content: space-between;
   padding: 0;
-  margin: 5px 0;
+  margin: 1px 0;
   min-height: 90px;
 }
 
@@ -1224,7 +1230,7 @@ a.copyright:active path {
   color: #ffffff;
   margin: 0;
   padding : 5px 17px 4px;
-  margin-right: 6px;
+  margin-right: 1px;
 }
 
 .booking .detail {
@@ -1253,11 +1259,9 @@ a.copyright:active path {
   overflow: hidden;
 }
 
-
 /* filter */
 
 .filter-range {
-  width: 330px;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -1273,7 +1277,7 @@ a.copyright:active path {
 .price-controls {
   position: relative;
   height: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -1304,8 +1308,8 @@ a.copyright:active path {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 65px;
+  width: 82px;
+  padding-left: 64px;
 }
 
 .price-controls input {
@@ -1361,7 +1365,7 @@ a.copyright:active path {
 }
 
 .range-toggle-max {
-  left: 80%;
+  left: 79%;
 }
 
 .filter-button {
