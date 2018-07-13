@@ -1096,21 +1096,36 @@ a.copyright:active path {
   margin: 0;
   display: flex;
   justify-content: space-between;
-  width: 36px;
+  width: 33px;
 }
 
-.sorting-order a  {
+.sorting-order .order-up  {
   text-decoration: none;
-  color: #cacaca;
 }
 
-.sorting-order a:hover,
-.sorting-order a:focus  {
-  color: #000000;
+.order-up .up {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  background:
+      url("../img/icon-up-dir.svg") no-repeat 0 15px;
+  width: 14px;
+  height: 26px;
+  cursor: pointer;
 }
 
-.sorting-order a:active  {
-  color: #81b3d2;
+.order-down .down {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  background:
+      url("../img/icon-up-dir.svg") no-repeat 0 0;
+  width: 14px;
+  height: 26px;
+  transform: rotate(180deg);
+  cursor: pointer;
 }
 
 .catalog {
